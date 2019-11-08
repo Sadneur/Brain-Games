@@ -4,7 +4,7 @@
   "description": "first project",
   "main": "index.js",
   "bin": {
-     "braingames": "src/bin/brain-games.js"
+    "braingames": "src/bin/brain-games.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/Sadneur/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/Sadneur/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/Sadneur/frontend-project-lvl1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1"
+  }
 }
