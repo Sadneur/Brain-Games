@@ -1,13 +1,18 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "myfirstprojectbraingamesilnur",
   "version": "1.0.0",
   "description": "first project",
   "main": "index.js",
   "bin": {
-    "braingames": "src/bin/brain-games.js"
+    "brain-games": "src/bin/brain-games.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
