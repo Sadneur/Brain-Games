@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/Sadneur/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "ilnur",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sadneur/frontend-project-lvl1/issues"
@@ -32,9 +32,7 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.2"
-  },
-  "dependencies": {
+    "eslint-plugin-import": "^2.18.2",
     "readline-sync": "^1.4.10"
   }
 }
