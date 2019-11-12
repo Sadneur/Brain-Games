@@ -2,4 +2,4 @@
 
 import userName from '..';
 
-export default userName;
+console.log(`Hello, ${userName}!`);
