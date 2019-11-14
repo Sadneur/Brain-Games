@@ -17,10 +17,10 @@ const brainEven = () => {
     } else if (frstQuestion === 'yes' && randomNumber % 2 === 1) {
       return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
     } else {
-      return console.log(`Incorrect input ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
+      return console.log(`Incorrect input ;(. You must enter "yes" or "no".\nLet's try again, ${userName}!`);
     }
   }
   return console.log(`Congratulations, ${userName}!`);
 };
 
-brainEven();
+export default brainEven;

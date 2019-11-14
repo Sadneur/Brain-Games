@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-import userName from '..';
+import brainEven from '../index';
+
+brainEven();
