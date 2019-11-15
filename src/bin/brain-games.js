@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import brainEven from '../index';
+import { greeting } from '../index';
 
-brainEven();
+greeting();
