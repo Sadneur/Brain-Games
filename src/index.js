@@ -1,30 +1,24 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from '@hexlet/pairs';
 
-export const greeting = () => {
-  console.log('Welcome to the Brain Games!\nAnswer "yes" if the number is even, otherwise answer "no".\n');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+export const randomNumber = (span) => Math.floor(Math.random() * span);
+
+export const greeting = (rules) => {
+  console.log(`Welcome to the Brain Games!\n${rules}\n`);
 };
 
-export const brainEven = () => {
-  console.log('Welcome to the Brain Games!\nAnswer "yes" if the number is even, otherwise answer "no".\n');
+export const gameEngine = (rules, questAndAnser) => {
+  greeting(rules);
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  console.log(`Hello, ${userName}!\n`);
 
-  for (let i = 0; i < 3; i += 1) {
-    const randomNumber = Math.round(Math.random() * 1000);
-    const frstQuestion = readlineSync.question(`Question: ${randomNumber} `);
-    if (frstQuestion === 'yes' && randomNumber % 2 === 0) {
+  let dataForRound = questAndAnser();
+  for (let rounds = 3; rounds > 0; rounds -= 1) {
+    const userAnwer = readlineSync.question(`Question: ${car(dataForRound)}\nYour answer: `);
+    if (userAnwer === cdr(dataForRound)) {
       console.log('Correct!');
-    } else if (frstQuestion === 'no' && randomNumber % 2 === 1) {
-      console.log('Correct!');
-    } else if (frstQuestion === 'no' && randomNumber % 2 === 0) {
-      return console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`);
-    } else if (frstQuestion === 'yes' && randomNumber % 2 === 1) {
-      return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`);
     } else {
-      return console.log(`Incorrect input ;(. You must enter "yes" or "no".\nLet's try again, ${userName}!`);
-    }
-  }
-  return console.log(`Congratulations, ${userName}!`);
+      return console.log(`'${userAnwer}' is wrong answer ;(. Correct answer was '${cdr(dataForRound)}'.\nLet's try again, ${userName}!`);
+    } dataForRound = questAndAnser();
+  } return console.log(`Congratulations, ${userName}!`);
 };
