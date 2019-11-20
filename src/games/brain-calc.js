@@ -3,10 +3,10 @@ import { gameEngine, randomNumber } from '../index';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const questAndAnser = () => {
+const questAndAnswer = () => {
   const randomMathSymb = '+*-'[randomNumber(3)];
-  const randomNumber1 = Math.round(Math.random() * 10);
-  const randomNumber2 = Math.round(Math.random() * 10);
+  const randomNumber1 = randomNumber(10);
+  const randomNumber2 = randomNumber(10);
 
   const operation = () => {
     switch (randomMathSymb) {
@@ -24,6 +24,6 @@ const questAndAnser = () => {
   return cons(quest, trueAnswer);
 };
 
-const brainCalcGame = () => gameEngine(rules, questAndAnser);
+const brainCalcGame = () => gameEngine(rules, questAndAnswer);
 
 export default brainCalcGame;
