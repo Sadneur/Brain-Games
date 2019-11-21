@@ -29,3 +29,10 @@ $ brain-gcd
 ``
 
 [![asciicast](https://asciinema.org/a/Er2XrG99uAnfcqlVowNAt0TN9.svg)](https://asciinema.org/a/Er2XrG99uAnfcqlVowNAt0TN9)
+
+## Run brain-progression game
+``
+$ brain-progression
+``
+
+[![asciicast](https://asciinema.org/a/RP7wGAXGT62ZSYFc6us17s3l4.svg)](https://asciinema.org/a/RP7wGAXGT62ZSYFc6us17s3l4)

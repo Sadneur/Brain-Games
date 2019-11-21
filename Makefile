@@ -10,3 +10,5 @@ brain-calc:
 	npx babel-node src/bin/brain-calc.js
 brain-gcd:
 	npm babel-node src/bin/brain-gcd.js
+brain-progression:
+	npm babel-node src/bin/brain-progression.js
