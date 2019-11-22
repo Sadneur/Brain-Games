@@ -16,7 +16,7 @@ $ make publish
 $ brain-even
 ``
 
-[![asciicast](https://asciinema.org/a/0Mjbxj60QxeHjuzBNhnRLM9YI.svg)](https://asciinema.org/a/0Mjbxj60QxeHjuzBNhnRLM9YI)
+[![asciicast](https://asciinema.org/a/7YAUNqrmZaDB9jmG8aAki7jIM.svg)](https://asciinema.org/a/7YAUNqrmZaDB9jmG8aAki7jIM)
 
 ## Brain-calc game
 ##### Rules: write the result of an expression
@@ -25,7 +25,7 @@ $ brain-even
 $ brain-calc
 ``
 
-[![asciicast](https://asciinema.org/a/JVVqvMaG1mcYYyDlWh5qft3e4.svg)](https://asciinema.org/a/JVVqvMaG1mcYYyDlWh5qft3e4)
+[![asciicast](https://asciinema.org/a/7NjQm6bR3JJcvmg4FprgdnE8t.svg)](https://asciinema.org/a/7NjQm6bR3JJcvmg4FprgdnE8t)
 
 ## Brain-gcd game
 ##### Rules: find the greatest common divisor of given numbers.
@@ -34,7 +34,7 @@ $ brain-calc
 $ brain-gcd
 ``
 
-[![asciicast](https://asciinema.org/a/Er2XrG99uAnfcqlVowNAt0TN9.svg)](https://asciinema.org/a/Er2XrG99uAnfcqlVowNAt0TN9)
+[![asciicast](https://asciinema.org/a/ec37YTooiWKq7HQnwdom0fiCq.svg)](https://asciinema.org/a/ec37YTooiWKq7HQnwdom0fiCq)
 
 ## Brain-progression game
 ##### Rules: find the number missing in progression
@@ -43,7 +43,7 @@ $ brain-gcd
 $ brain-progression
 ``
 
-[![asciicast](https://asciinema.org/a/RP7wGAXGT62ZSYFc6us17s3l4.svg)](https://asciinema.org/a/RP7wGAXGT62ZSYFc6us17s3l4)
+[![asciicast](https://asciinema.org/a/r6QFR04xi7uUpS4dCb13XyUHM.svg)](https://asciinema.org/a/r6QFR04xi7uUpS4dCb13XyUHM)
 
 ## Brain-prime game
 ##### Rules: answer "yes" if given number is prime. Otherwise answer "no".
@@ -52,4 +52,4 @@ $ brain-progression
 $ brain-prime
 ``
 
-[![asciicast](https://asciinema.org/a/ejbTdwKRv4uf7c6jvjGxcnZmw.svg)](https://asciinema.org/a/ejbTdwKRv4uf7c6jvjGxcnZmw)
+[![asciicast](https://asciinema.org/a/nVPPe2k7By38Rm65IPWUpV3nz.svg)](https://asciinema.org/a/nVPPe2k7By38Rm65IPWUpV3nz)
