@@ -7,32 +7,49 @@ This repository of the first JavaScript mini-game project "Brain Games"
 $ make publish
 ``
 
-[![asciicast](https://asciinema.org/a/X1hWQBHblBoRjn2JsHS6yTO4a.svg)](https://asciinema.org/a/X1hWQBHblBoRjn2JsHS6yTO4a)
+[![asciicast](https://asciinema.org/a/A4ppiwzxJFzYBVg3qqm0myHbN.svg)](https://asciinema.org/a/A4ppiwzxJFzYBVg3qqm0myHbN)
 
-## Run brain-even game
+## Brain-even game
+##### Rules: answer "yes" if the number is even, otherwise answer "no".
+------------
 ``
 $ brain-even
 ``
 
 [![asciicast](https://asciinema.org/a/0Mjbxj60QxeHjuzBNhnRLM9YI.svg)](https://asciinema.org/a/0Mjbxj60QxeHjuzBNhnRLM9YI)
 
-## Run brain-calc game
+## Brain-calc game
+##### Rules: write the result of an expression
+------------
 ``
 $ brain-calc
 ``
 
 [![asciicast](https://asciinema.org/a/JVVqvMaG1mcYYyDlWh5qft3e4.svg)](https://asciinema.org/a/JVVqvMaG1mcYYyDlWh5qft3e4)
 
-## Run brain-gcd game
+## Brain-gcd game
+##### Rules: find the greatest common divisor of given numbers.
+------------
 ``
 $ brain-gcd
 ``
 
 [![asciicast](https://asciinema.org/a/Er2XrG99uAnfcqlVowNAt0TN9.svg)](https://asciinema.org/a/Er2XrG99uAnfcqlVowNAt0TN9)
 
-## Run brain-progression game
+## Brain-progression game
+##### Rules: find the number missing in progression
+------------
 ``
 $ brain-progression
 ``
 
 [![asciicast](https://asciinema.org/a/RP7wGAXGT62ZSYFc6us17s3l4.svg)](https://asciinema.org/a/RP7wGAXGT62ZSYFc6us17s3l4)
+
+## Brain-prime game
+##### Rules: answer "yes" if given number is prime. Otherwise answer "no".
+------------
+``
+$ brain-prime
+``
+
+[![asciicast](https://asciinema.org/a/ejbTdwKRv4uf7c6jvjGxcnZmw.svg)](https://asciinema.org/a/ejbTdwKRv4uf7c6jvjGxcnZmw)

@@ -7,12 +7,12 @@ const questAndAnswer = () => {
   const randomNumber1 = randomNumber(100);
   const randomNumber2 = randomNumber(100);
 
-  const gcd = (a, b) => {
-    if (a % b === 0) {
-      return String(b);
+  const gcd = (num1, num2) => {
+    if (num1 % num2 === 0) {
+      return String(num2);
     }
-    const remains = a % b;
-    return gcd(b, remains);
+    const remains = num1 % num2;
+    return gcd(num2, remains);
   };
 
   const quest = `${randomNumber1} ${randomNumber2}`;

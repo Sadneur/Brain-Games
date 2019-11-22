@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import { gameEngine, randomNumber } from '../index';
 
-const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const rules = 'What is the result of the expression?';
 
 const questAndAnswer = () => {
   const randomMathSymb = '+*-'[randomNumber(3)];
