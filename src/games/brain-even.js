@@ -1,14 +1,18 @@
 import { cons } from '@hexlet/pairs';
-import { gameEngine, randomNumber } from '../index';
+import { startGameEngine, getRandomNumber } from '../index';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const questAndAnswer = () => {
-  const quest = randomNumber(30);
-  const trueAnswer = ((quest % 2) === 0 ? 'yes' : 'no');
+const randomNumbersRange = 30;
+
+const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+
+const generateQuestAndAnswer = () => {
+  const quest = getRandomNumber(randomNumbersRange);
+  const trueAnswer = isEven(quest);
   return cons(quest, trueAnswer);
 };
 
-const brainEvenGame = () => gameEngine(rules, questAndAnswer);
+const runBrainEvenGame = () => startGameEngine(rules, generateQuestAndAnswer);
 
-export default brainEvenGame;
+export default runBrainEvenGame;

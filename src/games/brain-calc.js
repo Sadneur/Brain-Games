@@ -1,29 +1,36 @@
 import { cons } from '@hexlet/pairs';
-import { gameEngine, randomNumber } from '../index';
+import { startGameEngine, getRandomNumber } from '../index';
 
 const rules = 'What is the result of the expression?';
 
-const questAndAnswer = () => {
-  const randomMathSymb = '+*-'[randomNumber(3)];
-  const randomNumber1 = randomNumber(10);
-  const randomNumber2 = randomNumber(10);
+const mathSymbols = '+*-';
 
-  const operation = () => {
-    switch (randomMathSymb) {
-      case '+':
-        return Number(randomNumber1) + Number(randomNumber2);
-      case '-':
-        return Number(randomNumber1) - Number(randomNumber2);
-      default:
-        return Number(randomNumber1) * Number(randomNumber2);
-    }
-  };
+const symbStrLength = mathSymbols.length;
 
-  const quest = `${randomNumber1} ${randomMathSymb} ${randomNumber2}`;
-  const trueAnswer = String(operation());
+const randomMathSymb = mathSymbols[getRandomNumber(symbStrLength)];
+
+const randomNumbersRange = 30;
+
+const doMathOperation = (firstNum, symbol, secondNum) => {
+  switch (symbol) {
+    case '+':
+      return firstNum + secondNum;
+    case '-':
+      return firstNum - secondNum;
+    default:
+      return firstNum * secondNum;
+  }
+};
+
+const generateQuestAndAnswer = () => {
+  const firstRandomNumber = getRandomNumber(randomNumbersRange);
+  const secondRandomNumber = getRandomNumber(randomNumbersRange);
+
+  const quest = `${firstRandomNumber} ${randomMathSymb} ${secondRandomNumber}`;
+  const trueAnswer = String(doMathOperation(firstRandomNumber, randomMathSymb, secondRandomNumber));
   return cons(quest, trueAnswer);
 };
 
-const brainCalcGame = () => gameEngine(rules, questAndAnswer);
+const runBrainCalcGame = () => startGameEngine(rules, generateQuestAndAnswer);
 
-export default brainCalcGame;
+export default runBrainCalcGame;

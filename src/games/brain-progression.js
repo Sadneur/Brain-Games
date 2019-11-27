@@ -1,32 +1,35 @@
 import { cons } from '@hexlet/pairs';
-import { gameEngine, randomNumber } from '../index';
+import { startGameEngine, getRandomNumber } from '../index';
 
 const rules = 'What number is missing in the progression?';
 
-const questAndAnswer = () => {
-  const randomNumber1 = randomNumber(100);
-  const randomNumber2 = randomNumber(100);
-  const randomIndex = randomNumber(10);
+const randomNumbersRange = 100;
+const rangeProgressionNumbers = 10;
 
-  const arithProgression = (num) => {
-    let result = '';
-    for (let i = 0; i < num; i += 1) {
-      if (i === randomIndex) {
-        result += '.. ';
-      } else {
-        result += `${randomNumber1 + randomNumber2 * i} `;
-      }
-    } return result;
-  };
+const getArithProgression = (radnomIndex, firstNum, secondNum) => {
+  let result = '';
+  for (let i = 0; i < rangeProgressionNumbers; i += 1) {
+    if (i === radnomIndex) {
+      result += '.. ';
+    } else {
+      result += `${firstNum + secondNum * i} `;
+    }
+  } return result;
+};
 
-  const hiddenNumber = (num) => `${randomNumber1 + randomNumber2 * num}`;
+const findHiddenNumber = (radnomIndex, firstNum, secondNum) => `${firstNum + secondNum * radnomIndex}`;
 
-  const quest = arithProgression(10);
-  const trueAnswer = hiddenNumber(randomIndex);
+const generateQuestAndAnswer = () => {
+  const firstRandomNumber = getRandomNumber(randomNumbersRange);
+  const secondRandomNumber = getRandomNumber(randomNumbersRange);
+  const numberOfProgression = getRandomNumber(rangeProgressionNumbers);
+
+  const quest = getArithProgression(numberOfProgression, firstRandomNumber, secondRandomNumber);
+  const trueAnswer = findHiddenNumber(numberOfProgression, firstRandomNumber, secondRandomNumber);
 
   return cons(quest, trueAnswer);
 };
 
-const brainProgressionGame = () => gameEngine(rules, questAndAnswer);
+const runBrainProgressionGame = () => startGameEngine(rules, generateQuestAndAnswer);
 
-export default brainProgressionGame;
+export default runBrainProgressionGame;
