@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import { startGameEngine, getRandomNumber } from '../index';
 
-const rules = 'Find the greatest common divisor of given numbers.';
+const rule = 'Find the greatest common divisor of given numbers.';
 
 const randomNumbersRange = 100;
 
@@ -14,15 +14,15 @@ const getGcd = (fistNum, secondNum) => {
 };
 
 const generateQuestAndAnswer = () => {
-  const fistRandomNumber = getRandomNumber(randomNumbersRange);
-  const secondRandomNumber = getRandomNumber(randomNumbersRange);
+  const fistValue = getRandomNumber(randomNumbersRange);
+  const secondValue = getRandomNumber(randomNumbersRange);
 
-  const quest = `${fistRandomNumber} ${secondRandomNumber}`;
-  const trueAnswer = getGcd(fistRandomNumber, secondRandomNumber);
+  const question = `${fistValue} ${secondValue}`;
+  const trueAnswer = getGcd(fistValue, secondValue);
 
-  return cons(quest, trueAnswer);
+  return cons(question, trueAnswer);
 };
 
-const runBrainGcdGame = () => startGameEngine(rules, generateQuestAndAnswer);
+const runBrainGcdGame = () => startGameEngine(rule, generateQuestAndAnswer);
 
 export default runBrainGcdGame;

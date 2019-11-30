@@ -1,29 +1,29 @@
 import { cons } from '@hexlet/pairs';
 import { startGameEngine, getRandomNumber } from '../index';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const randomNumbersRange = 100;
 
 const isPrime = (num) => {
   if (num < 2) {
-    return 'no';
+    return false;
   }
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const generateQuestAndAnswer = () => {
-  const quest = getRandomNumber(randomNumbersRange);
-  const trueAnswer = isPrime(quest);
+  const question = getRandomNumber(randomNumbersRange);
+  const trueAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return cons(quest, trueAnswer);
+  return cons(question, trueAnswer);
 };
 
-const runBrainPrimeGame = () => startGameEngine(rules, generateQuestAndAnswer);
+const runBrainPrimeGame = () => startGameEngine(rule, generateQuestAndAnswer);
 
 export default runBrainPrimeGame;
