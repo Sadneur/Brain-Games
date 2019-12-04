@@ -1,35 +1,33 @@
 import { cons } from '@hexlet/pairs';
-import { startGameEngine, getRandomNumber } from '../index';
+import { startGameEngine, getRandomValue } from '..';
 
 const rule = 'What is the result of the expression?';
 
-const mathSymbols = '+*-';
+const mathSigns = '+*-';
 
-const symbStrLength = mathSymbols.length;
+const randomMathSymb = mathSigns[getRandomValue(mathSigns.length)];
 
-const randomMathSymb = mathSymbols[getRandomNumber(symbStrLength)];
+const rangeRadnomValue = 30;
 
-const randomNumbersRange = 30;
-
-const calculate = (firstNum, symbol, secondNum) => {
+const calculate = (first, second, symbol) => {
   switch (symbol) {
     case '+':
-      return firstNum + secondNum;
+      return first + second;
     case '-':
-      return firstNum - secondNum;
+      return first - second;
     case '*':
-      return firstNum * secondNum;
+      return first * second;
     default:
       return null;
   }
 };
 
 const generateQuestAndAnswer = () => {
-  const firstValue = getRandomNumber(randomNumbersRange);
-  const secondValue = getRandomNumber(randomNumbersRange);
+  const firstValue = getRandomValue(rangeRadnomValue);
+  const secondValue = getRandomValue(rangeRadnomValue);
 
   const question = `${firstValue} ${randomMathSymb} ${secondValue}`;
-  const trueAnswer = String(calculate(firstValue, randomMathSymb, secondValue));
+  const trueAnswer = String(calculate(firstValue, secondValue, randomMathSymb));
   return cons(question, trueAnswer);
 };
 

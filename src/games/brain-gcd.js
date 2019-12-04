@@ -1,24 +1,24 @@
 import { cons } from '@hexlet/pairs';
-import { startGameEngine, getRandomNumber } from '../index';
+import { startGameEngine, getRandomValue } from '..';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-const randomNumbersRange = 100;
+const rangeRadnomValue = 100;
 
-const getGcd = (fistNum, secondNum) => {
-  if (fistNum % secondNum === 0) {
-    return String(secondNum);
+const getGcd = (firstDividend, secondDividend) => {
+  if (firstDividend % secondDividend === 0) {
+    return secondDividend;
   }
-  const remains = fistNum % secondNum;
-  return getGcd(secondNum, remains);
+  const remains = firstDividend % secondDividend;
+  return getGcd(secondDividend, remains);
 };
 
 const generateQuestAndAnswer = () => {
-  const fistValue = getRandomNumber(randomNumbersRange);
-  const secondValue = getRandomNumber(randomNumbersRange);
+  const firstDividend = getRandomValue(rangeRadnomValue);
+  const secondDividend = getRandomValue(rangeRadnomValue);
 
-  const question = `${fistValue} ${secondValue}`;
-  const trueAnswer = getGcd(fistValue, secondValue);
+  const question = `${firstDividend} ${secondDividend}`;
+  const trueAnswer = String(getGcd(firstDividend, secondDividend));
 
   return cons(question, trueAnswer);
 };

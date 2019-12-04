@@ -1,15 +1,15 @@
 import { cons } from '@hexlet/pairs';
-import { startGameEngine, getRandomNumber } from '../index';
+import { startGameEngine, getRandomValue } from '..';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const randomNumbersRange = 100;
+const randomRange = 100;
 
 const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
-  for (let i = 2; i < num; i += 1) {
+  for (let i = 2; i < (num / 2); i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -18,7 +18,7 @@ const isPrime = (num) => {
 };
 
 const generateQuestAndAnswer = () => {
-  const question = getRandomNumber(randomNumbersRange);
+  const question = getRandomValue(randomRange);
   const trueAnswer = isPrime(question) ? 'yes' : 'no';
 
   return cons(question, trueAnswer);
