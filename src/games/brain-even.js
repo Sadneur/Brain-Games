@@ -7,12 +7,12 @@ const rangeRadnomValue = 30;
 
 const isEven = (num) => num % 2 === 0;
 
-const generateQuestAndAnswer = () => {
+const generateQuestionAndAnswer = () => {
   const question = getRandomValue(rangeRadnomValue);
   const trueAnswer = isEven(question) ? 'yes' : 'no';
   return cons(question, trueAnswer);
 };
 
-const runBrainEvenGame = () => startGameEngine(rule, generateQuestAndAnswer);
+const runBrainEvenGame = () => startGameEngine(rule, generateQuestionAndAnswer);
 
 export default runBrainEvenGame;

@@ -5,12 +5,10 @@ const rule = 'What is the result of the expression?';
 
 const mathSigns = '+*-';
 
-const randomMathSymb = mathSigns[getRandomValue(mathSigns.length)];
-
 const rangeRadnomValue = 30;
 
-const calculate = (first, second, symbol) => {
-  switch (symbol) {
+const calculate = (first, second, mathSign) => {
+  switch (mathSign) {
     case '+':
       return first + second;
     case '-':
@@ -22,15 +20,16 @@ const calculate = (first, second, symbol) => {
   }
 };
 
-const generateQuestAndAnswer = () => {
+const generateQuestionAndAnswer = () => {
   const firstValue = getRandomValue(rangeRadnomValue);
   const secondValue = getRandomValue(rangeRadnomValue);
+  const randomMathSymb = mathSigns[getRandomValue(mathSigns.length)];
 
   const question = `${firstValue} ${randomMathSymb} ${secondValue}`;
   const trueAnswer = String(calculate(firstValue, secondValue, randomMathSymb));
   return cons(question, trueAnswer);
 };
 
-const runBrainCalcGame = () => startGameEngine(rule, generateQuestAndAnswer);
+const runBrainCalcGame = () => startGameEngine(rule, generateQuestionAndAnswer);
 
 export default runBrainCalcGame;

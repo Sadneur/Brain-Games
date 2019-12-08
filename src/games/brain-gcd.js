@@ -13,7 +13,7 @@ const getGcd = (firstDividend, secondDividend) => {
   return getGcd(secondDividend, remains);
 };
 
-const generateQuestAndAnswer = () => {
+const generateQuestionAndAnswer = () => {
   const firstDividend = getRandomValue(rangeRadnomValue);
   const secondDividend = getRandomValue(rangeRadnomValue);
 
@@ -23,6 +23,6 @@ const generateQuestAndAnswer = () => {
   return cons(question, trueAnswer);
 };
 
-const runBrainGcdGame = () => startGameEngine(rule, generateQuestAndAnswer);
+const runBrainGcdGame = () => startGameEngine(rule, generateQuestionAndAnswer);
 
 export default runBrainGcdGame;

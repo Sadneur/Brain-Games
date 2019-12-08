@@ -8,11 +8,10 @@ const rangeProgression = 10;
 
 const getQuestion = (range, radnomIndex, firstValue, secondValue) => {
   let result = '';
-  const hiddenValue = '..';
 
   for (let i = 0; i < range; i += 1) {
     if (i === radnomIndex) {
-      result = `${result}${hiddenValue} `;
+      result = `${result}.. `;
     } else if (i === range - 1) {
       result = `${result}${firstValue + secondValue * i}`;
     } else {
@@ -21,7 +20,7 @@ const getQuestion = (range, radnomIndex, firstValue, secondValue) => {
   } return result;
 };
 
-const generateQuestAndAnswer = () => {
+const generateQuestionAndAnswer = () => {
   const initialValue = getRandomValue(rangeRadnomValue);
   const progressionLength = getRandomValue(rangeRadnomValue);
   const progressionStep = getRandomValue(rangeProgression);
@@ -32,6 +31,6 @@ const generateQuestAndAnswer = () => {
   return cons(question, trueAnswer);
 };
 
-const runBrainProgressionGame = () => startGameEngine(rule, generateQuestAndAnswer);
+const runBrainProgressionGame = () => startGameEngine(rule, generateQuestionAndAnswer);
 
 export default runBrainProgressionGame;

@@ -17,13 +17,13 @@ const isPrime = (num) => {
   return true;
 };
 
-const generateQuestAndAnswer = () => {
+const generateQuestionAndAnswer = () => {
   const question = getRandomValue(randomRange);
   const trueAnswer = isPrime(question) ? 'yes' : 'no';
 
   return cons(question, trueAnswer);
 };
 
-const runBrainPrimeGame = () => startGameEngine(rule, generateQuestAndAnswer);
+const runBrainPrimeGame = () => startGameEngine(rule, generateQuestionAndAnswer);
 
 export default runBrainPrimeGame;
