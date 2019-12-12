@@ -3,30 +3,27 @@ import { startGameEngine, getRandomValue } from '..';
 
 const rule = 'What number is missing in the progression?';
 
-const rangeRadnomValue = 10;
-const rangeProgression = 10;
+const rangeRadnomValue = 20;
+const progressionLength = 10;
 
-const getQuestion = (range, radnomIndex, firstValue, secondValue) => {
+const getQuestion = (range, step, value) => {
   let result = '';
 
   for (let i = 0; i < range; i += 1) {
-    if (i === radnomIndex) {
+    if (i === step) {
       result = `${result}.. `;
-    } else if (i === range - 1) {
-      result = `${result}${firstValue + secondValue * i}`;
     } else {
-      result = `${result}${firstValue + secondValue * i} `;
+      result = `${result}${value + value * i} `;
     }
-  } return result;
+  } return result.trim();
 };
 
 const generateQuestionAndAnswer = () => {
   const initialValue = getRandomValue(rangeRadnomValue);
-  const progressionLength = getRandomValue(rangeRadnomValue);
-  const progressionStep = getRandomValue(rangeProgression);
+  const progressionStep = getRandomValue(progressionLength);
 
-  const question = getQuestion(rangeProgression, progressionStep, initialValue, progressionLength);
-  const trueAnswer = String(initialValue + progressionLength * progressionStep);
+  const question = getQuestion(progressionLength, progressionStep, initialValue);
+  const trueAnswer = String(initialValue + initialValue * progressionStep);
 
   return cons(question, trueAnswer);
 };
