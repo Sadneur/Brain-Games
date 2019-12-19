@@ -1,11 +1,9 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
-export const getRandomValue = (span) => Math.floor(Math.random() * span);
-
 const roundsCount = 3;
 
-export const startGameEngine = (rule, getQuestionAndAnswer) => {
+const startGameEngine = (rule, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${rule}\n`);
 
@@ -30,3 +28,5 @@ export const startGameEngine = (rule, getQuestionAndAnswer) => {
     }
   } console.log(`Congratulations, ${userName}!`);
 };
+
+export default startGameEngine;

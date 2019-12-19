@@ -1,9 +1,8 @@
 import { cons } from '@hexlet/pairs';
-import { startGameEngine, getRandomValue } from '..';
+import startGameEngine from '..';
+import getRandomValue from '../utils';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const randomRange = 100;
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -18,12 +17,10 @@ const isPrime = (num) => {
 };
 
 const generateQuestionAndAnswer = () => {
-  const question = getRandomValue(randomRange);
+  const question = getRandomValue(0, 100);
   const trueAnswer = isPrime(question) ? 'yes' : 'no';
 
   return cons(question, trueAnswer);
 };
 
-const runBrainPrimeGame = () => startGameEngine(rule, generateQuestionAndAnswer);
-
-export default runBrainPrimeGame;
+export default () => startGameEngine(rule, generateQuestionAndAnswer);

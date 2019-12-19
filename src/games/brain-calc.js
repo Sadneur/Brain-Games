@@ -1,14 +1,13 @@
 import { cons } from '@hexlet/pairs';
-import { startGameEngine, getRandomValue } from '..';
+import startGameEngine from '..';
+import getRandomValue from '../utils';
 
 const rule = 'What is the result of the expression?';
 
-const mathSigns = '+*-';
+const signs = '+*-';
 
-const rangeRadnomValue = 30;
-
-const calculate = (first, second, mathSign) => {
-  switch (mathSign) {
+const calculate = (first, second, sign) => {
+  switch (sign) {
     case '+':
       return first + second;
     case '-':
@@ -21,15 +20,13 @@ const calculate = (first, second, mathSign) => {
 };
 
 const generateQuestionAndAnswer = () => {
-  const firstValue = getRandomValue(rangeRadnomValue);
-  const secondValue = getRandomValue(rangeRadnomValue);
-  const randomMathSymb = mathSigns[getRandomValue(mathSigns.length)];
+  const firstValue = getRandomValue(0, 30);
+  const secondValue = getRandomValue(0, 30);
+  const randomMathSymb = signs[getRandomValue(0, signs.length - 1)];
 
   const question = `${firstValue} ${randomMathSymb} ${secondValue}`;
   const trueAnswer = String(calculate(firstValue, secondValue, randomMathSymb));
   return cons(question, trueAnswer);
 };
 
-const runBrainCalcGame = () => startGameEngine(rule, generateQuestionAndAnswer);
-
-export default runBrainCalcGame;
+export default () => startGameEngine(rule, generateQuestionAndAnswer);
